@@ -204,7 +204,7 @@ sf_distritos <- st_read('https://raw.githubusercontent.com/geoprocesamiento-2020
 sf_general_distritos_ultima_fecha <-
   left_join(sf_distritos, df_general_distritos_ultima_fecha, by = c('provincia', 'canton', 'distrito'))
 
-#objeto mapa de calor
+# Objeto mapa de calor
 distritoscentroides <- st_centroid(sf_distritos)
 sf_distritos_centroides_ultima_fecha <-
   left_join( distritoscentroides, df_general_distritos_ultima_fecha, distritoscentroides, by = c('distrito'))  %>%
@@ -217,8 +217,6 @@ Resumen
 Row {data-height=1}
 -----------------------------------------------------------------------
 ### **Última actualización: `r  df_general_pais_ultima_fecha$FECHA`**
-
-
 Row
 -----------------------------------------------------------------------
 
@@ -348,8 +346,6 @@ Casos positivos
 Row {data-height=1}
 -----------------------------------------------------------------------
 ### **Última actualización: `r  df_general_pais_ultima_fecha$FECHA`**
-
-
 Row
 -----------------------------------------------------------------------
 
@@ -626,11 +622,9 @@ Casos recuperados
 Row {data-height=1}
 -----------------------------------------------------------------------
 ### **Última actualización: `r  df_general_pais_ultima_fecha$FECHA`**
-
 Row
 -----------------------------------------------------------------------
 
-  
 ### Casos recuperados {.value-box}
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$RECUPERADOS, big.mark = ","), "", "(+",df_general_pais_ultima_fecha$NUE_RECUP,")", sep = " "), 
@@ -833,7 +827,6 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$menor_fall, big.mark 
 
 ```
 
-
 Row {data-width=400}
 -----------------------------------------------------------------------
   
@@ -905,6 +898,7 @@ Row {data-height=1}
 ### **Última actualización: `r  df_general_pais_ultima_fecha$FECHA`**
 
 ```{r}
+
 leaflet() %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
   addProviderTiles(providers$CartoDB.DarkMatter, group = "CartoDB.Dark") %>%
