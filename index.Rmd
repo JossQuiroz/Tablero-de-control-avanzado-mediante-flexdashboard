@@ -253,9 +253,6 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$RECUPERADOS, big.mark
 )
 ```
 
-Row
------------------------------------------------------------------------
-
 ### Casos fallecidos {.value-box}
 ```{r}
 valueBox(value = paste(format(df_general_pais_ultima_fecha$fallecidos, big.mark = ","), " (",
@@ -267,9 +264,12 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$fallecidos, big.mark 
 )
 ```
 
+Row
+-----------------------------------------------------------------------
+
 ### Hospitalizados {.value-box}
 ```{r}
-valueBox(value = paste(format(df_general_pais_ultima_fecha$hospital, big.mark = ","), "","(+",df_general_pais_ultima_fecha$nue_hospi,")", sep = " "), 
+valueBox(value = paste(format(df_general_pais_ultima_fecha$hospital, big.mark = ","), "", "(+",df_general_pais_ultima_fecha$nue_hospi,")", sep = " "), 
          caption = "Total de hospitalizados", 
          icon = icono_hospitalizados,
          color = color_hospitalizados
