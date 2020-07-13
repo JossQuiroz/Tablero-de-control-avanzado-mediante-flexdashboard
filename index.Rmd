@@ -917,5 +917,6 @@ leaflet() %>%
     toggleDisplay = TRUE,
     position = "bottomleft",
     tiles = providers$penStreetMap.Mapnik
-  ) 
+  )
+
 ```
