@@ -778,7 +778,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$fallecidos, big.mark 
 valueBox(value = paste(format(df_general_pais_ultima_fecha$muj_fall, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$muj_fall / df_general_pais_ultima_fecha$fallecidos, 1), 
                        "%)", sep = " ") ,
-         caption = "Total de casos recuperados Mujeres" ,
+         caption = "Total de casos fallecidos Mujeres" ,
          icon = icono_fallecidos , 
          color = color_fallecidos
 )
@@ -791,7 +791,7 @@ valueBox(value = paste(format(df_general_pais_ultima_fecha$muj_fall, big.mark = 
 valueBox(value = paste(format(df_general_pais_ultima_fecha$hom_fall, big.mark = ","), " (",
                        round(100 * df_general_pais_ultima_fecha$hom_fall / df_general_pais_ultima_fecha$fallecidos, 1), 
                        "%)", sep = " ") ,
-         caption = "Total de casos recuperados hombres" ,
+         caption = "Total de casos fallecidos hombres" ,
          icon = icono_fallecidos , 
          color = color_fallecidos
 )
@@ -910,7 +910,7 @@ leaflet() %>%
   addMiniMap(
     toggleDisplay = TRUE,
     position = "bottomleft",
-    tiles = providers$penStreetMap.Mapnik
+    tiles = providers$OpenStreetMap.Mapnik
   )
 
 ```
